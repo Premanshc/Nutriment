@@ -1,4 +1,10 @@
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <ctype.h>
+#include <time.h>
 int main()
 {
     //general variables
@@ -25,9 +31,9 @@ int main()
     //puri
     float puricalories = 101, puriprotein = 1.3, purifat = 7.4, puricarbohydrates = 7.5, purifiber = 0.2;
 
-    printf("                                   |=========================================================|\n");
+printf("\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n");
     printf("                                   |            Welcome to NUTRIMENT ver-1.2                 |\n");
-    printf("                                   |=========================================================|\n");
+printf("\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n");
 
     printf("Enter the type of Bread\nPress 1 for White Bread\nPress 2 for Brown Bread\n");
     scanf("%d", &typeofbread);
@@ -53,7 +59,9 @@ int main()
     }
     else
     {
-        printf("Invalid Input\n\nPlease run the code again :')");
+        printf("Error: Invalid user Input\n\nPlease run the code again :')");
+        exit(0);
+
     }
     printf("Enter the type of roti\nPress 1 for Whole wheat roti\nPress 2 for Naan roti\nPress 3 for Ragi roti\nPress 4 for Puri\n");
     scanf("%d", &typeofroti);
@@ -99,7 +107,8 @@ int main()
     }
     else
     {
-        printf("Invalid Input\n\nPlease run the code again :')");
+        printf("Error: Invalid user Input\n\nPlease run the code again :')");
+        exit(0);
     }
 
     printf("|=========================================================|\n");
@@ -111,13 +120,14 @@ int main()
     printf("|     Protein         |   %.2f g        |     %.2f g      \n", breadprotein, rotiprotein);
     printf("|     Fiber           |   %.2f g        |     %.2f g      \n", breadfiber, rotifiber);
     printf("|=========================================================|\n");
-
-    switch ((rand()%8))
+    
+    srand(time(NULL));
+    switch ((rand()%7))
     {
     case 1:
         printf("                     RANDOM HEALTH FACT       \n");
         printf("|=========================================================|\n");
-        printf("Omega-3 Fats Are Crucial and Most People Don't Get Enough\n");
+        printf(" Omega-3 Fats Are Crucial and Most People Don't Get Enough\n");
         printf("|=========================================================|\n");
         break;
 
